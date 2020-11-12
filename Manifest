@@ -1,0 +1,28 @@
+simrna_anneal.conf                              simrna configuration for first annealing
+simrna_prod.conf                                simrna configuration for production dynamics
+programmi/tutti_anneal.py                       program starting annealing for all sequences
+programmi/tutti_prod.py                         program starting production dynamics for all sequences
+programmi/estrai_migliore                       program finding best frame from simrna trafl
+programmi/genera_pdb.sh                         program to obtain a pdb from trafl
+programmi/muta.py                               program mutating a pdb rna file to a pdb dna
+programmi/punteggio.py                          program parsing rbdock output to find and report best docking frame
+programmi/attracca.py                           program generating automatic rxdock parameter configuration and running docking
+
+AF_1                                            directory holding all AF_1 computations
+AF_AB3                                          directory holding all AF_AB3 computations
+F10                                             directory holding all F10 computations
+FB1_39                                          directory holding all FB1_39 computations
+FB1_39T3                                        directory holding all FB1_39T3 computations
+{AF_1,AF_AB3,F10,FB1_39,FB1_39T3}/rna.seq       rna sequence
+{AF_1,AF_AB3,F10,FB1_39,FB1_39T3}/dna.seq       dna sequence
+{AF_1,AF_AB3,F10,FB1_39,FB1_39T3}/p2            folder holding simrna production step
+{AF_1,AF_AB3,F10,FB1_39,FB1_39T3}/p3            folder holding docking step
+{AF1,AF_AB3}/p3/tox.sd                          aflatoxin in mdl sd format
+{F10,FB1_39,FB1_39T3}/p3/tox.sd                 fumonisine in mdl sd format
+*/p3/energie                                    list of dna configurations sorted by energy
+*/p3/{0,1,2..}_clust                            folders holding docking computations
+*/p3/*_clust*/dna.mol2                          dna input file
+*/p3/*_clust*/rx*.prm                           rxdock parameter input file, automatically generated from prm.templ by program attracca.py
+*/p3/*_clust*/dna.mol2                          dna input file
+*/p3/*_clust*/addotto*.sd                       rxdock output files with poses and docking scores
+

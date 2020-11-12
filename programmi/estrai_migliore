@@ -1,0 +1,6 @@
+#!/bin/bash
+PATH=$PATH:$HOME/tossine/SimRNA_v3
+trafl_extract_lowestE_frame.py anneal.trafl 
+SimRNA_trafl2pdbs anneal-000001.pdb anneal_minE.trafl 1
+mv anneal_minE-000001.pdb anneal_minE.pdb
+

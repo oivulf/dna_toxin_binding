@@ -1,0 +1,2 @@
+#!/bin/sh
+SimRNA –s rna.seq –c ../simrna_anneal.conf –o anneal >& anneal.log &

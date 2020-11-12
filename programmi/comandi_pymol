@@ -1,0 +1,3 @@
+preset.ball_and_stick(selection='model bla', mode=1)
+set cartoon_ring_mode,3
+
